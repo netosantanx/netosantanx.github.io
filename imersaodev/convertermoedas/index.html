@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Aula 02 - Conversor de Moedas</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">Conversor de Moedas</h1>
+      <p class="page-subtitle">
+        Descubra o valor do Dólar, Euro ou Bitcoin em reais!
+      </p>
+      <img
+        src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg"
+        class="page-logo"
+        alt=""
+      />
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+      <img
+        src="https://www.alura.com.br/assets/img/home/alura-logo.svg"
+        alt="Logo da Alura"
+        class="alura-logo"
+      />
+    </a>
+
+    <a href="https://github.com/netosantanx" target="_blank">
+      <img
+        src="/img/github_logo.svg"
+        alt="Logo do GitHub"
+        class="github-logo"
+      />
+    </a>
+
+    <a href="https://twitter.com/netosantanx" target="_blank">
+      <img
+        src="/img/twitter_logo.svg"
+        alt="Logo do Twitter"
+        class="twitter-logo"
+      />
+    </a>
+
+    <main id="main-area" class="d-flex justify-content-center">
+      <section class="d-flex justify-content-center row mwi">
+        <select id="coins" class="form-control mwi">
+          <option>USD - Dólar</option>
+          <option>EUR - Euro</option>
+          <option>BTC - Bitcoin</option>
+        </select>
+
+        <input
+          type="number"
+          min="1"
+          class="form-control mwi spc"
+          placeholder="Valor"
+          aria-label="valueToConvert"
+          aria-describedby="basic-addon1"
+          id="valueToConvert"
+        />
+
+        <button type="button" id="convertButton" class="btn btn-success spc">
+          Converter
+        </button>
+
+        <section
+          id="resultArea"
+          class="d-flex justify-content-center"
+        ></section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
