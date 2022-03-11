@@ -9,24 +9,20 @@ let calcular = () => {
   const notaRedacao = document.getElementById("notaRedacao");
 
   const notaTotal =
-    parseInt(notaCiencias.value) +
-    parseInt(notaHumanas.value) +
-    parseInt(notaMatematica.value) +
-    parseInt(notaLinguagens.value) +
-    parseInt(notaRedacao.value);
+    parseFloat(notaCiencias.value) +
+    parseFloat(notaHumanas.value) +
+    parseFloat(notaMatematica.value) +
+    parseFloat(notaLinguagens.value) +
+    parseFloat(notaRedacao.value);
   console.log(notaTotal);
 
   const media = notaTotal / 5;
 
-  const showTotal = `Nota total: <strong>${notaTotal.toFixed(2)}</strong>. <br> Média: <strong>${media.toFixed(2)}</strong>.`;
-  const showResultElement = document.createElement("p");
-  showResultElement.id = "resultado"
+  const showTotal = `Total: ${notaTotal.toFixed(2)} | Média: ${media.toFixed(
+    2
+  )}`;
 
-    if (resultArea.innerHTML !== '') {
-      const getResultArea = document.getElementById('resultado')
-      resultArea.removeChild(getResultArea  )
-    }  showResultElement.innerHTML = `${showTotal}`;
-    resultArea.appendChild(showResultElement);
+  resultArea.innerHTML = showTotal;
 };
 
 calcButton.addEventListener("click", calcular);
