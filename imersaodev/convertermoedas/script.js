@@ -9,20 +9,23 @@ const fetchCoins = async () => {
     .catch(() => "You must provide an url");
 
   const selectedCoin = document.getElementById("coins").value;
-  const inputArea = document.getElementById("valueToConvert");
   const inputValue = document.getElementById("valueToConvert").value;
 
   const usdValue = returnItems.USDBRL.bid;
   const eurValue = returnItems.EURBRL.bid;
   const btcValue = returnItems.BTCBRL.bid;
 
-  if (selectedCoin === "USD - Dólar") {
-    resultArea.innerHTML = `${inputValue * usdValue} reais`;
-  } else if (selectedCoin === "EUR - Euro") {
-    resultArea.innerHTML = `${inputValue * eurValue} reais`;
-  } else {
-    resultArea.innerHTML = `${inputValue * btcValue} reais`;
-  }
+  switch (selectedCoin) {
+    case 'USD - Dólar':
+      resultArea.innerHTML = `${inputValue * usdValue} reais`;
+      break;
+    case 'EUR - Euro':
+      resultArea.innerHTML = `${inputValue * eurValue} reais`;
+      break;
+    case 'BTC - Bitcoin':
+      resultArea.innerHTML = `${inputValue * btcValue} reais`;
+      break;
+  } 
 };
 
 convertButton.addEventListener("click", fetchCoins);
